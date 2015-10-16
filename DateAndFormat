@@ -1,0 +1,89 @@
+package conditions;
+/*
+ * 
+ * @Date 06/23/2015
+ * 
+ * @Author Joseph Kirksh 
+ * 
+ */
+
+
+
+import java.text.SimpleDateFormat; //import the SimpleDate Format clas
+import java.util.Date; //Import the Date Class
+import java.util.Scanner; // import the Scanner class
+
+public class DateAndFormat {
+
+	public static void main(String[] args) {
+		
+		//Declare the date object. An instance of the Date class
+		/*Date date = new Date();
+		
+		//Print out a title
+		System.out.println("Welcome to Walmart!");
+		System.out.println("---------------------");
+		
+		SimpleDateFormat DateForm = new SimpleDateFormat("yyyy.MMMMM.dd hh:mm aaa"); //This the format for the appearance of the date printed out
+		System.out.println(DateForm.format(date)); //Print out the date 
+		System.out.println();
+		
+		//Declare a scanner object to accept input from the keyboard
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter username : ");
+		String username = input.nextLine();  //User enters a string username from the keyboard
+		
+		//Password is doing the same thing as the username with prompting user for a password
+		System.out.print("Enter password : ");
+		String password = input.nextLine();//take input for password variable as a String
+		//These are lines to have spacing
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		//And the title prints out at the bottom along with the login time with date
+		System.out.println("Welcome to Walmart");
+		System.out.println("---------------------");
+		System.out.print("login time : ");
+		SimpleDateFormat DateForm1 = new SimpleDateFormat("yyyy.MMMMM.dd hh:mm aaa");
+		System.out.print(DateForm1.format(date));
+		*/
+		int count = 0;
+		
+		while(count < 10){
+		SimpleDateFormat DateForm2 = new SimpleDateFormat("MM.dd.yyyy hh.mm.ss");
+		Date Date4 = new Date();
+		System.out.println(DateForm2.format(Date4));
+		count++;
+		}
+		
+		/*1) What is the date class?
+		 * 
+		 *     The date class is a blueprint to represent an instance of time. It is part of 
+		 *of Java utility library that requires an import statement.  A new Date object is automatically set to the time of its creation, to the 
+		 *millisecond.  A date object is something like Date date1 = new Date();
+		 *
+		 * 2) What is simple data format class?
+		 *   
+		 *   This class is part of the java.text.* package. It allows the user to output Date Objects
+		 *   using other formats.  This class interacts with the Date objects much like the DecimalFormat class interacts with
+		 *   the floating-point numbers.  A date object is created, then a SimpleDateFormat object is created to describe its output appearance
+		 * 
+		 * 3) Which package is needed for data class and simple date format class?
+		 * 
+		 *    The SimpleDateFormatClass exists in the java.text.* package.
+		 *    
+		 *    The Date class exists in the java.util. package
+		 * 
+		 * 
+		 * 4)Write a program to demonstrate simple date format class and date format class? 
+		 *   
+		 *    Programs written in separate Java Files
+		 * 
+		 */
+		
+		
+	}
+}
