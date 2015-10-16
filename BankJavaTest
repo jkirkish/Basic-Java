@@ -1,0 +1,165 @@
+package conditions;
+
+/*
+ * 
+ * @Date 06/23/2015
+ * 
+ * @Author Joseph Kirksh 
+ * 
+ */
+
+import java.util.Scanner;
+
+public class BankTest {
+
+	static double balance = 7297.00;
+
+	static BankTest Account = new BankTest();
+
+	/**
+	 * @return the balance
+	 */
+	public static double getBalance() {
+		return balance;
+	}
+
+	/**
+	 * @param balance
+	 *            the balance to set
+	 */
+	public void setBalance(double newBalance) {
+
+		this.balance = balance;
+	}
+
+	public double CalculateInterest(double totalAmount) {
+
+		double interest = totalAmount * 0.02;
+		return interest;
+	}
+
+	public double Add(double amountAdd) {
+
+		balance = balance + amountAdd;
+		return balance;
+
+	}
+
+	public double setCreditToAdd(double credit) {
+		// additional credit given for meeting a certain amount
+		balance = balance + credit;
+		return balance;
+	}
+
+	public double subtract(double Minus) {
+
+		balance = balance - Minus;
+		return balance;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Welcome to xyz Bank");
+		System.out.println("-----------------------------");
+		System.out.println();
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Username: ");
+		String Username = input.nextLine();
+		System.out.print("Enter Password: ");
+		String password = input.nextLine();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("Welcome User");
+		System.out.println("-----------------------");
+		System.out.println();
+		System.out.println("Press 1 to know the total Balance");
+		System.out.println("Press 2 to add the balance");
+		System.out.println("Press 3 to withdraw amount");
+		System.out.println("Press 4 to exit");
+		int press = input.nextInt();
+		System.out.println();
+		System.out.println();
+
+		switch (press) {
+		case 1:
+			System.out.println("Your current balance is: $"+ Account.getBalance());
+			break;
+		case 2:
+			System.out.print("Enter amount to add: ");
+			double toAdd = input.nextDouble();
+			System.out.println("Current Balance before interest is: "
+					+ Account.getBalance());
+			if (toAdd > 0) {
+				// user adds money and does not subtract it then add interest to
+				// it at 0.2% of total amount
+				double Amount1 = Account.CalculateInterest(toAdd);
+				System.out.println("The interest rate of 0.2% added is: $"
+						+ Amount1);
+				Account.setBalance(Account.Add(Amount1));
+				System.out.println("Now the current balance with the interest only added is: "+ Account.getBalance());
+			}
+			System.out.println("So now, Let's add the initial deposit of $"
+					+ toAdd + " to the current balance of $"+ Account.getBalance());
+			Account.Add(toAdd);
+			System.out.println("Now the current Balance is $"
+					+ Account.getBalance());
+			break;
+		case 3:
+			System.out.println("The current Balance before any deductions is $"	+ Account.getBalance());
+			System.out.print("Enter amount to deduct: ");
+			double deduct = input.nextDouble();
+			System.out.println("The amount you want to deduct is: $" + deduct);
+			Account.setBalance(Account.subtract(deduct));
+			System.out.println("After deduction the balance stands at: $"
+					+ Account.getBalance());
+			if (Account.getBalance() > 1000.00) {
+				// if the balance is more than 1000
+				// after subtraction of money then
+				// provide credit of additional 500
+				Account.setBalance(Account.setCreditToAdd(500.00));
+				System.out.println("The $500 credit added sets current balance at $"+ Account.getBalance());
+			} else if (deduct == 250) {
+				// if after giving credit the user removes 250 dollars
+				// then display message that half credit used
+				// user pulls 250 out
+				Account.setBalance(Account.setCreditToAdd(-250.00));
+				System.out.println("Half credit of $250 was added instead, because of deduction you requested.");																								// is																									// printed
+				System.out.println("The current balance stands at $"
+						+ Account.getBalance());
+			} else if (deduct == 500) {
+				// if after giving credit the user removes 500 dollars
+				// then calculate the penalty as 30 % of total credit
+				double credit = 500.00;
+				double penalty = .3 * credit;
+				balance = Account.getBalance() - penalty;
+				// Account.setBalance(balance2);
+				System.out.println("The penalty to apply is $" + penalty);
+				System.out.println("The current Balance is after penalty is $"
+						+ balance);
+			}
+
+			else if (balance < 1000.00) {
+				// if the balance is less than 1000
+				// after subtraction then credit should
+				// not be given
+				System.out.println("No credit given.");
+
+			}
+
+			System.out.println("Now the current Balance stands at $"
+					+ Account.getBalance());
+			break;
+		case 4:
+			System.out.println("Exiting without adding or withdrawing, forces you to incurr a penalty of 0.05 percent to your current balance!");
+		    System.out.println("Your current balance is before penalty is $" + Account.getBalance());
+			double penalty1 = Account.getBalance() * 0.05;
+			balance = Account.getBalance() - penalty1;
+			System.out.println("The penalty equates to -$" + penalty1 + ". Your balance after penalty is " + balance);
+			System.out.println("HAVE A NICE DAY!");
+			System.exit(0);
+
+		}
+	}
+}
