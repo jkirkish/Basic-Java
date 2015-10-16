@@ -1,0 +1,24 @@
+package conditions;
+
+/*
+ * 
+ * @author Joseph Kirkish 
+ */
+public class conditional {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double y = 100.00;
+
+		if (y == 100) {
+
+			System.out.println("Yes y is equal to 100");
+		} else {
+
+			System.out.println("No y is not equal to 100");
+		}
+
+	}
+}
+
