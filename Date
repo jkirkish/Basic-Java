@@ -1,0 +1,36 @@
+package conditions;
+
+/*
+ * 
+ * @Date 06/23/2015
+ * 
+ * @Author Joseph Kirksh 
+ * 
+ */
+
+import java.text.SimpleDateFormat; //import the SimpleDate Format clas
+import java.util.Date; //Import the Date Class
+import java.util.Date;
+
+public class SimpleDateFormatExample {
+
+	public static void main(String[] args) {
+		
+		
+		//Declare the date object. An instance of the Date class
+				Date dateObject = new Date();
+				
+				System.out.print("The current date format is: ");
+				System.out.println(dateObject);//default printout format
+				
+				System.out.println(); // spacing
+				
+				System.out.print("Now the format has changed to: ");
+				SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy.MMMMM.dd hh:mm aaa"); //This the format for the appearance of the date printed out
+				System.out.println(DateFormat.format(dateObject)); //Print out the date 
+				
+				
+
+	}
+
+}
