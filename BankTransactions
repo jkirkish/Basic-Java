@@ -1,0 +1,12 @@
+package conditions;
+
+import java.util.Date;
+
+public abstract class BankTransaction extends Bank {
+	
+	public abstract double getAmount();
+	public abstract String getFirstName();
+	public abstract String getLastName();
+	public abstract Date getDate();
+
+}
