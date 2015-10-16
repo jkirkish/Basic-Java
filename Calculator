@@ -1,0 +1,50 @@
+package conditions;
+
+/*
+ * 
+ * @Author Joseph Kirkish 
+ * date June, 5, 2015
+ * 
+ * 
+ */
+
+import java.util.Scanner; //got to bring in Scanner class to use this library
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* 1) Declare an Object
+		 * 
+		 * 2) Instantiate the Object
+		 * 
+		 * 3) Assign a value
+		 */
+		
+		
+		Scanner in = new Scanner(System.in); //The three steps mentioned above are combined into one declaring the Scanner object 
+		
+		System.out.print("Please enter a double value for number1: ");//Prompt the user to input a value for number1
+		double number1 = in.nextDouble();//the inputted value is a double
+		
+		
+		System.out.print("Please enter a int value for number2: ");//Prompt user again for number two
+		double number2 = in.nextDouble();//the value is a double to input
+		
+		double sum = number2 + number1; //add the numbers
+		double subtract = number2 - number1;//subtract the numbers
+		double multiply = number2 * number1;//multiply the numbers
+		double division = number1 / number2;//divide the numbers
+		double Modulus = number1 % number2;//use the remainder operation
+		
+		//Output the results
+		System.out.println();
+		System.out.println( "Sum of " + number2 + " and " + number1 + " is " + sum);
+		System.out.println( "Subtracted difference of " + number2 + " and " + number1 + " is " + subtract);
+		System.out.println( "The product of " + number2 + " and " + number1 + " is " + multiply);
+		System.out.println( "The quotient of " + number2 + " and " + number1 + " is " + division);
+		System.out.println( "The remainder of " + number2 + " and " + number1 + " is " + Modulus);
+	}
+
+}
