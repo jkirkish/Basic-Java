@@ -1,0 +1,60 @@
+package conditions;
+
+import java.util.Date;//Import the Date Class
+import java.util.Calendar;
+
+
+public class DateExample {
+
+	public static void main(String[] args) {
+		
+		Date newDate = new Date();// Date Object
+		Date date  = new Date();
+		newDate.UTC(1999, 5, 23, 4, 43, 45);
+		date.UTC(2015, 3, 27, 2, 56, 32);
+		System.out.println(newDate.getTime());
+		System.out.println(newDate.compareTo(date));
+		System.out.println(newDate.after(date));
+		System.out.println(newDate.before(date));
+		System.out.println(newDate.clone());
+		System.out.println(newDate.getDay());
+		System.out.println(newDate.getTime());
+		System.out.println(newDate.equals(date));
+		System.out.println(newDate.getHours());
+		System.out.println(newDate.getTime());
+		System.out.println(newDate.getMinutes());
+		System.out.println(newDate.getMonth());
+		System.out.println(newDate.getSeconds());
+		System.out.println(newDate.getTimezoneOffset());
+		System.out.println(date.getYear());
+		System.out.println(date.getMonth());
+		System.out.println(date.getDay());
+		System.out.println(date.getHours());
+		System.out.println(date.getDate());
+		System.out.println(date.getSeconds());
+		System.out.println(date.getClass());
+		
+		
+		 System.out.println("The date for today is: ");
+		 System.out.println(newDate);
+		Date date1 = new Date();
+	    System.out.println("The date is: "  + date1);
+		
+		 Calendar cal = Calendar.getInstance();
+		 cal.set(2013,02,03);
+		 date1 = cal.getTime();
+		 System.out.println(date);
+		 int count = 0;
+		 for(int i = 5; i <= 100; i = i + 15){
+			 count ++;
+			 System.out.println(count);
+			 
+		
+		 Calendar cal1 = Calendar.getInstance();
+		 cal1.set(2012,11,25);
+		 Date date2 = cal1.getTime();
+		 System.out.println(date2);
+		 }
+	}
+
+}
