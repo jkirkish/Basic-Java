@@ -1,0 +1,96 @@
+package conditions;
+/*
+ * 
+ * 
+ * 
+ * @author Joseph Kirkish
+ * date 06/03/2015
+ */
+public class DepartmentStore {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//Departments
+		String Department1 = "Electronics and Office";
+		String Department2 = "Movie Music and Books";
+		String Department3 = "Home Furniture and Patio";
+		
+		
+		//SubDepartments
+		String SubDepartment1 = "Electronics";
+		String SubDepartment2 = "Video Games";
+		String SubDepartment3 = "Music";
+		String SubDepartment4 = "Books";
+		String SubDepartment5 = "Furniture";
+		String SubDepartment6 = "Patio and Garden";
+		
+		//Store products
+		String product1 = "Apple Iphone 6+";
+		String product2 = "XboxOne";
+		String product3 = "CD player";
+		String product4 = "Jekyll + Hide CD";
+		String product5 = "Princess Bedtime stories";
+		String product6 = "365 Read_Aloud Bedtime Bible Stories";
+		String product7 = "Desk";
+		String product8 = "Water Bed";
+		String product9 = "Grill";
+		String product10 = "Chair";
+		String product11 = "Playstation4";
+		String product12 = "Water Hose";
+		String product13 = "Superman soundtrack CD";
+		
+		//Department 1 organization
+		if(Department1 == "Electronics and Office")
+		{
+		 if(SubDepartment1 == "Electronics")
+		  {
+		        System.out.println("Electronics are " + product1 +", " + product3 );
+		  if(SubDepartment2 == "Video Games")
+		  {
+			  System.out.println("Videogame products are " + product2 +", " + product11);
+		  }
+		  
+		  
+		  }
+		
+		}
+		
+		System.out.println("____________________________________________________________");
+		
+		//Department2 organization
+		if(Department2 == "Movie Music and Books")
+		{
+		 if(SubDepartment3 == "Music")
+		  {
+		        System.out.println("Music products are " + product4 +", " + product13 );
+		  if(SubDepartment4 == "Books")
+		  {
+			  System.out.println("Book products are " + product6 +", " + product5);
+		  }
+		  
+		  
+		  }
+		
+		}
+		System.out.println("_________________________________________________________");
+		
+		//Department 3 Organization
+		if(Department3 == "Home Furniture and Patio")
+		{
+		 if(SubDepartment5 == "Furniture")
+		  {
+		        System.out.println("Furniture products are " + product7 +", " + product10 );
+		  if(SubDepartment6 == "Patio and Garden")
+		  {
+			  System.out.println("Patio and Garden products are " + product9 +", " + product12);
+		  }
+		  
+		  
+		  }
+		
+		}
+	}
+
+}
