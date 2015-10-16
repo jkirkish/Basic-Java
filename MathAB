@@ -1,0 +1,37 @@
+package conditions;
+
+//import java.math.*;
+
+public class mathAb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = -10;
+		int y = 2;
+		int z = 3;
+		/*
+		//System.out.println(Math.abs(x));
+		System.out.println(Math.max(y,z));
+		System.out.println(Math.min(y,z));
+		System.out.println("Power is: " + Math.pow(y,z));
+		System.out.println("Random is: " +Math.random());
+		*/
+		//for(int count = 0; count < 250; count++){
+			//even numbers less than 250
+			//if(count % 2 == 0){
+				
+				//System.out.println(count);
+			//}
+		//}
+		
+		for(int count = 0; count < 250; count++){
+			if((x > 6.01) && (x < 6.99)){
+				double x1 =  Math.random();
+				System.out.println(x1);
+			}
+		}
+	}
+}
+
+
