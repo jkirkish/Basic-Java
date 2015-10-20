@@ -1,0 +1,12 @@
+class MyThread extends Thread{
+            public void run(){
+			System.out.println("My thread running");
+		}
+}	
+
+	class ThreadEx1{{
+			MyThread t = new MyThread();
+			t.start();
+		}
+	}
+
