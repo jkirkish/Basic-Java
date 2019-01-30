@@ -1,70 +1,24 @@
 package conditions;
 
-public class DataTypes {
+/*
+ * 
+ * @author Joseph Kirkish 
+ */
+public class conditional {
 
-	static byte x;
-	static short y;
-	static int z;
-	static long l;
-	static boolean b;
-	static float f;
-	static double d;
-	static char c;
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		 
-		//bytes
-		 System.out.print("Byte Default value is:");
-		 System.out.println(x);
-		 System.out.println("Byte ranges Range is: -128 to 127");
-		 System.out.println("It is 8-bit");
-		 System.out.println();
-		 //shorts
-		 System.out.print("shorts Default value is:");
-		 System.out.println(y);
-		 System.out.println("Byte ranges Range is: -32,768  to -32,767");
-		 System.out.println("It is 16-bit");
-		 System.out.println();
-		 //ints
-		 System.out.print("Int Default value is:");
-		 System.out.println(z);
-		 System.out.println("Int ranges Range min is:- 2,147,483,648");
-		 System.out.println("Int ranges Range max is:  2,147,483,647(inclusive).");
-		 System.out.println("It is 32-bit");
-		 System.out.println();
-		 //longs
-		 System.out.print("Long Default value is:");
-		 System.out.println(l);
-		 System.out.println("Int ranges Range min is:-9,223,372,036,854,775,808");
-		 System.out.println("Int ranges Range max is: 9,223,372,036,854,775,807.");
-		 System.out.println("It is 64-bit");
-		 System.out.println();
-		 //boolean
-		 System.out.print("Boolean Default value is:");
-		 System.out.println(b);
-		 System.out.println("Only two values that exist are true and false");
-		 System.out.println("It is 1-bit");
-		 System.out.println();
-		 //float
-		 System.out.print("Float Default value is:");
-		 System.out.println(y);
-		 System.out.println("It is 32-bit");
-		 System.out.println();
-		 
-		 
-		 //double
-		 System.out.print("Double Default value is:");
-		 System.out.println(d);
-		 System.out.println("It is 64-bit");
-		 System.out.println();
-		 //char
-		 System.out.print("Char Default value is: 'u0000'");
-		 System.out.println(c);
-		 System.out.println("Char ranges min is: '\u0000' (or 0).");
-		 System.out.println("Char ranges max is: '\uffff' +  (or 65,535 inclusive).");
-		 
-	}
 
+		double y = 100.00;
+
+		if (y == 100) {
+
+			System.out.println("Yes y is equal to 100");
+		} else {
+
+			System.out.println("No y is not equal to 100");
+		}
+
+	}
 }
+
